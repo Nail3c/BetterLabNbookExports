@@ -1,0 +1,29 @@
+{
+    "name": "Better LabNbook export",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 3,
+    "version": "1",
+    "icons":{
+        "24": "bouton.png"
+    },
+    "description": "Une extension pour améliorer l'exportation dans LabNbook",
+    "permissions": ["activeTab", "scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+          "js": ["content.js"],
+          "css": ["style.css"],
+          "matches": [
+            "https://uga.labnbook.fr/*"
+          ]
+        }
+      ],
+      "web_accessible_resources": [{
+        "resources": [ "bouton.png"],
+        "matches": [ "https://uga.labnbook.fr/*" ]
+      }]
+  }
