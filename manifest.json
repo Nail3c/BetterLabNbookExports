@@ -7,9 +7,6 @@
     },
     "description": "Une extension pour améliorer l'exportation dans LabNbook",
     "permissions": ["activeTab", "scripting"],
-    "background": {
-      "service_worker": "background.js"
-    },
     "content_scripts": [
         {
           "js": ["content.js"],

@@ -44,6 +44,7 @@ function addButton (root){
     //button.textContent = 'Export'
     button.src=chrome.runtime.getURL('bouton.png')
     button.id='BLE_button'
+    button.title = 'Exporter le LabDoc avec BLE'
     button.onclick = function (){
         download(generateCSV(getTab(root)))
     }
